@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyendoi</title>
+</head>
+<body>
+<form>
+    <p>
+        <label> Chuyển đổi đơn vị Feet sang Meters </label>
+        <input id = "inputFeet" type="number" placeholder="Feet"
+               oninput="ConverterFeetToMeters(this.value)"
+               onchange="onverterFeetToMeters(this.value)">
+    <p> Meters: <span id="outputMeters"></span></p>
+        <br>
+        <br>
+        <label> Chuyển đổi đơn vị  Meters sang Feet  </label>
+        <input id = "inputMeters" type="number" placeholder="Meters"
+               oninput="ConverterMetersTofeet(this.value)"
+               onchange="ConverterMetersTofeet(this.value)">
+    <p> Feet: <span id="outputFeet"></span></p>
+
+    </p>
+
+</form>
+<script>
+    function onverterFeetToMeters(length){
+        let numb = parseFloat(length);
+        document.getElementById("outputMeters").innerHTML = numb*3.279
+    }
+    function ConverterMetersTofeet(length){
+        let numb = parseFloat(length);
+        document.getElementById("outputFeet").innerHTML = numb*0.305
+    }
+
+
+</script>
+</body>
+</html>
